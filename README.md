@@ -4,4 +4,7 @@ CSS3;
 BOOTSTRAP;
 PHP 7.
 
-Obs.: o projeto contém um arquivo docker-compose.yaml, onde uma imagem Docker está sendo configurada e utilizada para ser o interpretador do PHP com servidor Apache embutido.
+Obs.: 
+1- o projeto contém um arquivo docker-compose.yaml, onde uma imagem Docker está sendo configurada e utilizada para ser o interpretador do PHP com servidor Apache embutido;
+
+2- está sendo criado e usado um arquivo .txt para armazenar os registros dos chamados da aplicação.
