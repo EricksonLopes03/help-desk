@@ -1,4 +1,5 @@
 <?php require_once 'valida_acesso_paginas.php' ?>
+<?php require_once 'recupera_registro.php' ?>
 
 <html>
 
@@ -35,25 +36,18 @@
           </div>
 
           <div class="card-body">
-
-            <div class="card mb-3 bg-light">
-              <div class="card-body">
-                <h5 class="card-title">Título do chamado...</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                <p class="card-text">Descrição do chamado...</p>
-
+            <!-- listando chamados -->
+            <?php foreach($chamados as $chamado){ 
+              $chamado = converteOperador($chamado); ?>
+              <div class="card mb-3 bg-light">
+                <div class="card-body">
+                  <h5 class="card-title"> <?= $chamado['1'] ?> </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">  <?= $chamado['2'] ?> </h6>
+                  <p class="card-text"> <?= $chamado['3'] ?> </p>
+                </div>
               </div>
-            </div>
 
-            <div class="card mb-3 bg-light">
-              <div class="card-body">
-                <h5 class="card-title">Título do chamado...</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                <p class="card-text">Descrição do chamado...</p>
-
-              </div>
-            </div>
-
+            <?php } ?>
             <div class="row mt-5">
               <div class="col-6">
                 <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</a>
